@@ -15,6 +15,8 @@ const modulo = (x, m) => {
   const logoBtn = document.querySelector(".logo");
   const about = document.querySelector(".about-wrapper");
   const body = document.querySelector(".body");
+  const overlays = document.querySelectorAll(".overlay")
+  const infos = document.querySelectorAll(".info-button")
   // slider 1
   const previousFirst = document.querySelector(".previous-first");
   const nextFirst = document.querySelector(".next-first");
@@ -33,6 +35,12 @@ const modulo = (x, m) => {
   const slidesThird = document.querySelectorAll(".s-third");
   const stepThird = document.querySelector(".step-third");
   const bulletThird = document.querySelectorAll(".bar-third")
+  // slider 4
+  const previousFourth = document.querySelector(".previous-third");
+  const nextFourth = document.querySelector(".next-third");
+  const slidesFourth = document.querySelectorAll(".s-third");
+  const stepFourth = document.querySelector(".step-third");
+  const bulletFourth = document.querySelectorAll(".bar-third")
   // petite fonction pour aller d'avant en arrière. 
   const go = (delta, slider, step, bullet, indexArr) => {
   // la slide actuelle a la classe .visible -> on la lui enlève
@@ -43,6 +51,9 @@ const modulo = (x, m) => {
   // modulo permet de rester dans l'intervalle [0, nombre de slide]
   current[indexArr] = modulo(current[indexArr]+delta, slider.length);
   updateStep(slider, current[indexArr], step);
+  if (overlays[indexArr].classList.contains("overlay-open")) {
+    closeInfo(indexArr)
+  }
   // on assigne la classe .visible à la nouvelle current
   slider[current[indexArr]].classList.toggle("visible");
   bullet[current[indexArr]].classList.toggle("selected"); 
@@ -55,6 +66,10 @@ const modulo = (x, m) => {
   const getDestination = (index, slider, step, bullet, indexArr) => {
       const diff = index - current[indexArr];
       go(diff, slider, step, bullet, indexArr);
+
+      if (overlays[indexArr].classList.contains("overlay-open")) {
+        closeInfo(indexArr)
+      }
   }
 
   const toggleAbout = () => {
@@ -64,6 +79,15 @@ const modulo = (x, m) => {
   const closeAbout = () => {
     body.classList.remove("about-open")
   }
+
+  const openInfo = (overlay) => {
+    overlay.classList.toggle("overlay-open")
+  }
+
+  const closeInfo = (index) => {
+    overlays[index].classList.remove("overlay-open")
+  }
+  
 
   aboutBtn.addEventListener("click", () => toggleAbout());
   logoBtn.addEventListener("click", () => closeAbout());
@@ -77,6 +101,9 @@ const modulo = (x, m) => {
   // slider 3
   previousThird.addEventListener("click", () => go(-1, slidesThird, stepThird, bulletThird, 2));
   nextThird.addEventListener("click", () => go(1, slidesThird, stepThird, bulletThird, 2));
+  // slider 4
+  previousFourth.addEventListener("click", () => go(-1, slidesFourth, stepFourth, bulletFourth, 2));
+  nextFourth.addEventListener("click", () => go(1, slidesFourth, stepFourth, bulletFourth, 2));
   
    // slider 1 (à dupliquer pour chaque slider de bullet point)
 for (let index = 0; index < bulletFirst.length; index++) {
@@ -96,4 +123,16 @@ for (let index = 0; index < bulletThird.length; index++) {
     const element = bulletThird[index];
     element.addEventListener("click", () => getDestination(index, slidesThird, stepThird, bulletThird, 2))
     
+}
+
+ // slider 4
+ for (let index = 0; index < bulletFourth.length; index++) {
+    const element = bulletFourth[index];
+    element.addEventListener("click", () => getDestination(index, slidesFourth, stepFourth, bulletFourth, 2))
+    
+}
+
+for (let index = 0; index < infos.length; index++) {
+    const element = infos[index];
+    element.addEventListener("click", () => openInfo(overlays[index]))
 }

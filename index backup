@@ -21,24 +21,6 @@
 <main>
     <!-- FIRST Roussey 3D -->
     <div class="roussey-3d">
-        <!-- Overlay -->
-        <div class="overlay">
-            <div class="slide-with-text">
-                <span>2023</span>
-                <h3>creative concept for roussey 3D e-commerce website — aiming to highlight the 3D process of the artist</h3>
-                <div class="project-specs">
-                    <div class="info">
-                        <h5>Role</h5>
-                        <h6>Art Director</h6>
-                    </div>
-                    <div class="info">
-                        <h5>Art Direction</h5>
-                        <h6>Célia Mahiou</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="slider">
             <button class="previous-first left">
                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,17 +37,35 @@
 
                 <!-- Slide 2 -->
                 <div class="slide s-first">
+                    <div class="slide-with-text">
+                        <span>2023</span>
+                        <h3>creative concept for roussey 3D e-commerce website — aiming to highlight the 3D process of the artist</h3>
+                        <div class="project-specs">
+                            <div class="info">
+                                <h5>Role</h5>
+                                <h6>Art Director</h6>
+                            </div>
+                            <div class="info">
+                                <h5>Art Direction</h5>
+                                <h6>Célia Mahiou</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide s-first">
                     <video width="100%" playsinline autoplay muted loop >
                         <source src="assets/images/roussey-3d/Roussey-hp.mp4" type="video/mp4">
                     </video>
                 </div>
 
-                <!-- Slide 3 -->
+                <!-- Slide 4 -->
                 <div class="slide s-first">
                     <img src="assets/images/roussey-3d/roussey-pdp.gif" style="width:100%">
                 </div>
 
-                <!-- Slide 4 -->
+                <!-- Slide 5 -->
                 <div class="slide s-first">
                     <div class="mobileimg-x2">
                         <img src="assets/images/roussey-3d/roussey01.png">
@@ -84,11 +84,8 @@
         </div>
         <div class="specs">
             <div class="project-title">roussey 3D - design concept</div>
-            <!-- Changer le nombre de slides à la main -->  
-            <div class="right-side">
-                <button class="info-button">Info</button>
-                <div class="slide-step step-first">1/4</div>
-            </div>         
+            <!-- Changer le nombre de slides à la main -->           
+            <div class="slide-step step-first">1/5</div>
         </div>
         <div class="bullets">
             <div class="bar bar-first selected"></div>
@@ -342,86 +339,6 @@
         </div>
 
     </aside>
-
-    <!-- FOURTH Jacquemus -->
-    <div class="jacquemus">
-        <div class="slider">
-            <button class="previous-fourth left">
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0L0 6L6 12L6 8L13 8V4L6 4L6 0Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7L5 7L5 9.586L1.414 6L5 2.414L5 5L12 5V7Z" fill="black"/>
-                </svg>
-            </button>
-
-            <div class="slides">
-                <!-- Slide 1 -->
-                <div class="slide visible s-fourth">
-                    <img src="assets/images/roussey-3d/roussey-cover.gif" style="width:100%">
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide s-fourth">
-                    <video width="100%" playsinline autoplay muted loop >
-                        <source src="assets/images/roussey-3d/Roussey-hp.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide s-fourth">
-                    <img src="assets/images/roussey-3d/roussey-pdp.gif" style="width:100%">
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="slide s-fourth">
-                    <div class="mobileimg-x2">
-                        <img src="assets/images/roussey-3d/roussey01.png">
-                        <img src="assets/images/roussey-3d/roussey02.png">
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Overlay -->
-            <div class="overlay">
-                <div class="slide-with-text">
-                    <span>2023</span>
-                    <h3>creative concept for roussey 3D e-commerce website — aiming to highlight the 3D process of the artist</h3>
-                    <div class="project-specs">
-                        <div class="info">
-                            <h5>Role</h5>
-                            <h6>Art Director</h6>
-                        </div>
-                        <div class="info">
-                            <h5>Art Direction</h5>
-                            <h6>Célia Mahiou</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="next-fourth right">
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12L13 6L7 0V4H0V8H7V12Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 5H8V2.414L11.586 6L8 9.586V7H1V5Z" fill="black"/>
-                </svg>
-            </button>
-        </div>
-        <div class="specs">
-            <div class="project-title">roussey 3D - design concept</div>
-            <!-- Changer le nombre de slides à la main -->  
-            <div class="right-side">
-                <button class="info-button">Info</button>
-                <div class="slide-step step-fourth">1/4</div>
-            </div>         
-        </div>
-        <div class="bullets">
-            <div class="bar bar-fourth selected"></div>
-            <div class="bar bar-fourth"></div>
-            <div class="bar bar-fourth"></div>
-            <div class="bar bar-fourth"></div>
-            <div class="bar bar-fourth"></div>
-        </div>
-    </div>
 </main>
 
 <script src="app.js"></script>
