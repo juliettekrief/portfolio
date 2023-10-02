@@ -1,0 +1,483 @@
+@font-face {
+    font-family: Eurostile LT;
+    src: url(assets/fonts/Eurostile-LT-Std-Demi.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Eurostile LT;
+    src: url(assets/fonts/Eurostile-LT-Std-Medium.woff);
+    font-weight: medium;
+}
+
+
+div {
+    font-family: Eurostile LT;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.nav-container {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    left: 0;
+    z-index: 10;
+}
+
+nav {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .about {
+    font-family: Eurostile LT;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    font-size: 12px;
+    width: fit-content;
+    position: static;
+    padding: 0;
+    cursor: pointer;
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.35s ease-in-out;
+}
+
+.about-open .close {
+    transform: none;
+}
+
+.open {
+    transition: transform 0.35s ease-in-out;
+}
+
+.about-open .open {
+    transform: translateY(-100%);
+}
+
+.open, .close {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    font-size: 12px;
+}
+
+.roussey-3d {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #9BC481;
+    padding-top: 50px;
+}
+
+.thursdays-child {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #DFDFDF;
+}
+
+.beige-pill {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #F8F7F4;
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    position: absolute;
+    width: 50%;
+    z-index: 2;
+    height: 100%;
+}
+
+.left{
+    left: 0;
+    text-align: left;
+}
+
+.right{
+    right: 0;
+    text-align: right;
+}
+
+.slide-with-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 70vh;
+}
+
+.slides {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    z-index: -1;
+}
+
+.slide.visible {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 70vw;
+}
+
+.mobileimg-x2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    max-height: 70vh;
+}
+
+.mobileimg-x2>img {
+    width: auto;
+    height: 70vh;
+}
+
+.mobilevideo-x2>video {
+    width: auto;
+    height: 50vh;
+}
+
+.mobilevideo-x2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    max-height: 70vh;
+}
+
+.specs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.24px;
+    font-size: 0.75em;
+    margin-bottom: -5px;
+}
+
+.roussey-3d {
+    background-color: #9BC481;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-slide {
+    height: auto;
+    padding: 1em;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    font-size: 16px;
+    margin: 0;
+}
+
+span {
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    font-size: 0.75em;
+    margin: 0;
+}
+
+h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    font-size: 0.75em;
+    margin: 0;
+}
+
+h6 {
+    font-weight: 100;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.bar:first-of-type{
+    margin-right: 1.5px;
+}
+
+.bar:not(.bar:first-of-type){
+    margin: 0 1.5px;
+}
+
+.bar:last-of-type{
+    margin-left: 1.5px;
+    margin-right: 0 !important;
+}
+
+.bullets{
+    width: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.bar{
+    width: calc((100% - 1.5px)*0.2);
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    position: relative;
+}
+
+.bar::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    z-index: 2;
+    transition: opacity .25s ease-in-out;
+    opacity: 0;
+}
+
+.bar.selected::after{
+    opacity: 1;
+}
+
+.about-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 5;
+    transform: translateX(-100%);
+    transition: transform .35s ease-in-out;
+}
+
+.about-open .about-wrapper {
+    transform: none;
+}
+
+
+.about-container {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+    padding: 50px 1rem 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.cursus {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cursus-item {
+    width: 48%;
+    margin: 0;
+}
+
+.about-info {
+    margin-bottom: 40px;
+}
+
+.about-info > a {
+    display: block;
+    letter-spacing: 0.24px;
+    font-size: 12px;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.about-info > p {
+    display: block;
+    letter-spacing: 0.24px;
+    font-size: 12px;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.about-curriculum > h1 {
+    letter-spacing: 0.24px;
+    font-size: 22px;
+    text-transform: uppercase;
+    justify-content: left;
+    color: black;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.future-corp {
+    letter-spacing: 0.24px;
+    font-size: 22px;
+    text-transform: uppercase;
+    justify-content: left;
+    color: black;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.cursus-item > h2 {
+    letter-spacing: 0.24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.company, .school {
+    letter-spacing: 0.24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    font-weight: bold;
+}
+
+.details, .years {
+    letter-spacing: 0.24px;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+.company, .school, .details {
+    margin-bottom: 4px;
+}
+
+.experience:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.skills {
+    margin-bottom: 1rem;
+    margin-top: 40px;
+    letter-spacing: 0.24px;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.skills > p {
+    margin: 0;
+}
+
+@media (min-width: 400px) {
+    .slides {
+        width: 70vw;
+    }
+    .slider {
+        height: 80vh;  
+    }
+}
+
+@media (min-width: 719px) {
+    .about-wrapper {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1023px) {
+    .mobilevideo-x2 > video {
+        height: 70vh;
+    }
+    .slide-with-text > h3 {
+        max-width: 60%;
+        font-size: 20px;
+    }
+    .slide > img {
+        height: 65vh;
+    }
+}
+
+@media (min-width: 1439px) {
+    .slides {
+        width: 55vw;
+    }
+}
