@@ -8,7 +8,7 @@ const modulo = (x, m) => {
   // En JS, les tableaux commencent à 0
 
   // AJOUTER AUTANT DE ZÉRO QUE DE NB DE SLIDER
-  const current = [0,0,0];
+  const current = [0,0,0,0,0];
   // on récupère les différents élements pour l'interactivité.
 
   const aboutBtn = document.querySelector(".about");
@@ -36,11 +36,18 @@ const modulo = (x, m) => {
   const stepThird = document.querySelector(".step-third");
   const bulletThird = document.querySelectorAll(".bar-third")
   // slider 4
-  const previousFourth = document.querySelector(".previous-third");
-  const nextFourth = document.querySelector(".next-third");
-  const slidesFourth = document.querySelectorAll(".s-third");
-  const stepFourth = document.querySelector(".step-third");
-  const bulletFourth = document.querySelectorAll(".bar-third")
+  const previousFourth = document.querySelector(".previous-fourth");
+  const nextFourth = document.querySelector(".next-fourth");
+  const slidesFourth = document.querySelectorAll(".s-fourth");
+  const stepFourth = document.querySelector(".step-fourth");
+  const bulletFourth = document.querySelectorAll(".bar-fourth")
+  // slider 5
+  const previousFifth = document.querySelector(".previous-fifth");
+  const nextFifth = document.querySelector(".next-fifth");
+  const slidesFifth = document.querySelectorAll(".s-fifth");
+  const stepFifth = document.querySelector(".step-fifth");
+  const bulletFifth = document.querySelectorAll(".bar-fifth")
+
   // petite fonction pour aller d'avant en arrière. 
   const go = (delta, slider, step, bullet, indexArr) => {
   // la slide actuelle a la classe .visible -> on la lui enlève
@@ -102,8 +109,16 @@ const modulo = (x, m) => {
   previousThird.addEventListener("click", () => go(-1, slidesThird, stepThird, bulletThird, 2));
   nextThird.addEventListener("click", () => go(1, slidesThird, stepThird, bulletThird, 2));
   // slider 4
-  previousFourth.addEventListener("click", () => go(-1, slidesFourth, stepFourth, bulletFourth, 2));
-  nextFourth.addEventListener("click", () => go(1, slidesFourth, stepFourth, bulletFourth, 2));
+  previousFourth.addEventListener("click", () => go(-1, slidesFourth, stepFourth, bulletFourth, 3));
+  nextFourth.addEventListener("click", () => go(1, slidesFourth, stepFourth, bulletFourth, 3));
+  // slider 5
+  previousFifth.addEventListener("click", () => go(-1, slidesFifth, stepFifth, bulletFifth, 4));
+  nextFourth.addEventListener("click", () => go(1, slidesFifth, stepFifth, bulletFifth, 4));
+  
+  for (let index = 0; index < infos.length; index++) {
+      const element = infos[index];
+      element.addEventListener("click", () => openInfo(overlays[index]))
+  }
   
    // slider 1 (à dupliquer pour chaque slider de bullet point)
 for (let index = 0; index < bulletFirst.length; index++) {
@@ -125,14 +140,17 @@ for (let index = 0; index < bulletThird.length; index++) {
     
 }
 
- // slider 4
- for (let index = 0; index < bulletFourth.length; index++) {
+    // slider 4
+for (let index = 0; index < bulletFourth.length; index++) {
     const element = bulletFourth[index];
-    element.addEventListener("click", () => getDestination(index, slidesFourth, stepFourth, bulletFourth, 2))
-    
+    element.addEventListener("click", () => getDestination(index, slidesFourth, stepFourth, bulletFourth, 3))
+   
 }
 
-for (let index = 0; index < infos.length; index++) {
-    const element = infos[index];
-    element.addEventListener("click", () => openInfo(overlays[index]))
+    // slider 5
+for (let index = 0; index < bulletFifth.length; index++) {
+    const element = bulletFifth[index];
+    element.addEventListener("click", () => getDestination(index, slidesFifth, stepFifth, bulletFifth, 4))
+   
 }
+
