@@ -113,7 +113,7 @@ const modulo = (x, m) => {
   nextFourth.addEventListener("click", () => go(1, slidesFourth, stepFourth, bulletFourth, 3));
   // slider 5
   previousFifth.addEventListener("click", () => go(-1, slidesFifth, stepFifth, bulletFifth, 4));
-  nextFourth.addEventListener("click", () => go(1, slidesFifth, stepFifth, bulletFifth, 4));
+  nextFifth.addEventListener("click", () => go(1, slidesFifth, stepFifth, bulletFifth, 4));
   
   for (let index = 0; index < infos.length; index++) {
       const element = infos[index];

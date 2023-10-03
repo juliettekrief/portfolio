@@ -401,7 +401,7 @@ h5, .visit-website {
     position: relative;
 }
 
-.bar-fourth {
+.bar-fourth, .bar-fifth {
     width: 100%;
     height: 2px;
     background-color: rgba(0, 0, 0, 0.2);
