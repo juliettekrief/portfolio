@@ -574,13 +574,16 @@ h5, .visit-website {
         width: 70vw;
     }
     .slider {
-        height: 50vh;  
+        height: 55vh;  
     }
 }
 
 @media (min-width: 719px) {
     .about-wrapper {
         width: 50%;
+    }
+    .slider {
+        height: 80vh;  
     }
 }
 
