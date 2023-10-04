@@ -142,6 +142,7 @@ button {
     z-index: 2;
     height: 100%;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .left{
@@ -247,6 +248,7 @@ button {
     padding: 0;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .visit-website {
