@@ -140,6 +140,7 @@ button {
     width: 47%;
     z-index: 2;
     height: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .left{
@@ -244,6 +245,7 @@ button {
     position: static;
     padding: 0;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .visit-website {
@@ -572,7 +574,7 @@ h5, .visit-website {
         width: 70vw;
     }
     .slider {
-        height: 80vh;  
+        height: 50vh;  
     }
 }
 
